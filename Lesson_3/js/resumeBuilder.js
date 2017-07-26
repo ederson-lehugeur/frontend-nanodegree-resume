@@ -15,6 +15,18 @@ console.log(funThoughts);
 $("#main").append(funThoughts);
 */
 
+/*
+var s = "audacity";
+
+var udacityizer = function(s) {
+	s = s[1].toUpperCase() + s.slice(2);
+	
+	return s;
+}
+
+console.log(udacityizer(s));
+*/
+
 var name = "Éderson Lehugeur";
 var role = "Web Developer";
 
@@ -40,10 +52,40 @@ numbers.push(4);
 $("#main").append(numbers);
 */
 
-var nameTest = "charLIe chaplIN";
-var finalName;
-console.log(finalName);
+/*
+var sampleArray = [0,0,7];
 
-var num = 15;
-console.log(String.replace(num, /5/, '2'));
+var incrementLastArrayElement = function(_array) {
+	// Atribuição por valor. Fará uma cópia do array para não modificar o original.
+	var newArray = _array.slice();
+	// Atribuição por referência.
+	//var newArray = _array;
+    var lastValue = newArray.pop();
+    newArray.push(lastValue + 1);
+
+    return newArray;
+};
+
+console.log(incrementLastArrayElement(sampleArray));
+*/
+
+var name = "AlbERt EINstEiN";
+
+function nameChanger(oldName) {
+	// Atribuição por referência.
+    var finalName = oldName;
+    // Your code goes here!
+	var names = oldName.split(" ");
+	names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
+	names[1] = names[1].toUpperCase();
+	// Une elementos de um array em uma única string com espaços entre os elementos.
+    finalName = names.join(" ");
+	
+    // Don't delete this line!
+    return finalName;
+};
+
+// Did your code work? The line below will tell you!
+console.log(nameChanger(name));
+
 
