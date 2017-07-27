@@ -36,8 +36,9 @@ var formattedRole = HTMLheaderRole.replace("%data%", role);
 $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 
-/*
 var skills = ["awesomeness", "programming", "teaching", "JS"];
+
+/*
 var numbers = [0, 1, 2, 3];
 
 $("#main").append(skills);
@@ -87,3 +88,47 @@ function nameChanger(oldName) {
 // Did your code work? The line below will tell you!
 console.log(nameChanger(name));
 */
+
+// Objeto literal.
+var bio = {
+	"name": "Éderson Lehugeur",
+	"role": "Web Developer",
+	"contacts": {
+		"mobile": "(51) 99999-9999",
+		"email": "eder@example.com",
+		"github": "edersonlehugeur",
+		"facebook": "@edersonlehugeur",
+		"location": "Porto Alegre"
+	},
+	"welcomeMessage": "lorem ipsum dolor sit amet etc.",
+	"skills": ["awesomeness", "delivering things", "cryogenic sleep", "saving the universe"],
+	"bioPic": "images/fry.jpg"
+};
+
+$("#main").append(bio.name);
+
+/*
+// Notação de ponto.
+// Cria uma nova propriedade e a define.
+bio.city = "Porto Alegre";
+bio.email = "eder@example.com";
+*/
+
+/*
+// Notação de colchete.
+bio["city"] = "Porto Alegre";
+bio["email"] = "eder@example.com";
+*/
+
+var work = {};
+work.position = "Course Developer";
+work.employer = "Udacity";
+work.years = 0.3;
+
+var education = {};
+education["name"] = "Nova Southeastern University";
+education["years"] = "2005 - 2013";
+education["city"] = "Fort Lauderdale, FL, US";
+
+$("#main").append(work["position"]);
+$("#main").append(education.name);
