@@ -69,10 +69,10 @@ var incrementLastArrayElement = function(_array) {
 console.log(incrementLastArrayElement(sampleArray));
 */
 
+/*
 var name = "AlbERt EINstEiN";
 
 function nameChanger(oldName) {
-	// Atribuição por referência.
     var finalName = oldName;
     // Your code goes here!
 	var names = oldName.split(" ");
@@ -80,12 +80,10 @@ function nameChanger(oldName) {
 	names[1] = names[1].toUpperCase();
 	// Une elementos de um array em uma única string com espaços entre os elementos.
     finalName = names.join(" ");
-	
     // Don't delete this line!
     return finalName;
 };
 
 // Did your code work? The line below will tell you!
 console.log(nameChanger(name));
-
-
+*/
