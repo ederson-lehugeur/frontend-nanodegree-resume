@@ -1,95 +1,3 @@
-//$("#main").append("Charlie Chaplin");
-
-/*
-var firstName = "Eddye";
-var age = 32;
-console.log(firstName);
-*/
-
-/*
-var awesomeThoughts = "I am Eddye and I am AWESOME!";
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-console.log(funThoughts);
-$("#main").append(funThoughts);
-*/
-
-/*
-var s = "audacity";
-
-var udacityizer = function(s) {
-	s = s[1].toUpperCase() + s.slice(2);
-	
-	return s;
-}
-
-console.log(udacityizer(s));
-*/
-
-var name = "Éderson Lehugeur";
-var role = "Web Developer";
-
-var formattedName = HTMLheaderName.replace("%data%", name);
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-
-var skills = ["awesomeness", "programming", "teaching", "JS"];
-
-/*
-var numbers = [0, 1, 2, 3];
-
-$("#main").append(skills);
-$("#main").append(skills[0]);
-$("#main").append(skills.length);
-
-$("#main").append(numbers);
-numbers.pop();
-$("#main").append(numbers);
-numbers.push(3);
-numbers.push(4);
-$("#main").append(numbers);
-*/
-
-/*
-var sampleArray = [0,0,7];
-
-var incrementLastArrayElement = function(_array) {
-	// Atribuição por valor. Fará uma cópia do array para não modificar o original.
-	var newArray = _array.slice();
-	// Atribuição por referência.
-	//var newArray = _array;
-    var lastValue = newArray.pop();
-    newArray.push(lastValue + 1);
-
-    return newArray;
-};
-
-console.log(incrementLastArrayElement(sampleArray));
-*/
-
-/*
-var name = "AlbERt EINstEiN";
-
-function nameChanger(oldName) {
-    var finalName = oldName;
-    // Your code goes here!
-	var names = oldName.split(" ");
-	names[0] = names[0].slice(0,1).toUpperCase() + names[0].slice(1).toLowerCase();
-	names[1] = names[1].toUpperCase();
-	// Une elementos de um array em uma única string com espaços entre os elementos.
-    finalName = names.join(" ");
-    // Don't delete this line!
-    return finalName;
-};
-
-// Did your code work? The line below will tell you!
-console.log(nameChanger(name));
-*/
-
-// Objeto literal.
 var bio = {
 	"name": "Éderson Lehugeur",
 	"role": "Web Developer",
@@ -98,37 +6,75 @@ var bio = {
 		"email": "eder@example.com",
 		"github": "edersonlehugeur",
 		"facebook": "@edersonlehugeur",
-		"location": "Porto Alegre"
+		"location": "San Franciso"
 	},
 	"welcomeMessage": "lorem ipsum dolor sit amet etc.",
 	"skills": ["awesomeness", "delivering things", "cryogenic sleep", "saving the universe"],
 	"bioPic": "images/fry.jpg"
 };
 
-$("#main").append(bio.name);
+var education = {
+	"schools": [
+		{
+			"name": "Eckerd College",
+			"location": "Saint Petersburg, FL, US",
+			"degree": "BA",
+			"major": ["CompSci", "French"],
+			"dates": 2003,
+			"url": "http://example.com"
+		}, 
+		{
+			"name": "Nova Southeastern University",
+			"city": "Fort Lauderdale, FL, US",
+			"degree": "Masters",
+			"major": ["CompSci"],
+			"dates": 2013,
+			"url": "http://example.com"
+		}
+	],
+	"onlineCourses": [
+		{
+			"title": "JavaScript Syntax",
+			"school": "Udacity",
+			"dates": 2014,
+			"url": "http://www.udacity.com/course/ud804"
+		}
+	]
+};
 
-/*
-// Notação de ponto.
-// Cria uma nova propriedade e a define.
-bio.city = "Porto Alegre";
-bio.email = "eder@example.com";
-*/
+var work = {
+	"jobs": [
+		{
+			"employer": "Planet Express",
+			"title": "Delivery Boy",
+			"dates": "January 3000 - Future",
+			"description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes..."
+		},
+		{
+			"employer": "Panucce's Pizza",
+			"title": "Delivery Boy",
+			"dates": "1998 - Desember 31, 1991",
+			"description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes..."
+		}
+	]
+};
 
-/*
-// Notação de colchete.
-bio["city"] = "Porto Alegre";
-bio["email"] = "eder@example.com";
-*/
+var projects = {
+	"projects": [
+		{
+			"title": "Sample Project 1",
+			"dates": 2014,
+			"description": "Who moved my cheese cheesy feet cauliflower cheese. Queso taleggio when the cheese comes...",
+			"images": [
+				"https://lh3.ggpht.com/23-sq0p0GqF06YX3BwIYPIXLX_Ma_clLXySKEHlphqlxr2l-PPbC80U8SjDi96KTWbNjKfY2Pdq_gyFK9A=s300#w=1757&h=1080",
+				"https://lh3.ggpht.com/23-sq0p0GqF06YX3BwIYPIXLX_Ma_clLXySKEHlphqlxr2l-PPbC80U8SjDi96KTWbNjKfY2Pdq_gyFK9A=s300#w=1757&h=1080"
+			]
+		}
+	]
+};
 
-var work = {};
-work.position = "Course Developer";
-work.employer = "Udacity";
-work.years = 0.3;
+var formattedName = HTMLheaderName.replace("%data%", bio.name);
+var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-var education = {};
-education["name"] = "Nova Southeastern University";
-education["years"] = "2005 - 2013";
-education["city"] = "Fort Lauderdale, FL, US";
-
-$("#main").append(work["position"]);
-$("#main").append(education.name);
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
