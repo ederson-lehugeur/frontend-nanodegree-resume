@@ -163,3 +163,9 @@ var education = {
 		}
 	]
 }
+
+// Todo HTML é convertido em um objeto JavaScript chamado Document Object Model.
+// Com o DOM é possível manipular todos os elementos da página.
+/*
+document.getElementsByClassName("text-atom")[0]
+*/
